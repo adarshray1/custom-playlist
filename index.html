@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="music-player">
+    <div class="track-info">
+      <img id="album-art" class="album-art" src="" alt="Album Art">
+      <div class="track-details">
+        <div id="track-name" class="track-name">Track Name</div>
+        <div id="artist-name" class="artist-name">Artist Name</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="prev-button">⏮</button>
+      <button id="play-button">Play</button>
+      <button id="next-button">⏭</button>
+      <button id="shuffle-button">🔀</button>
+      <button id="repeat-button">🔁</button>
+    </div>
+
+    <div class="progress-container">
+      <div id="progress-bar" class="progress-bar"></div>
+      <input type="range" id="volume-bar" class="volume-bar" min="0" max="100" value="50">
+    </div>
+
+    <div id="lyrics-container" class="lyrics-container">
+      <div class="lyrics"></div>
+    </div>
+
+    <canvas id="visualizer" class="visualizer" width="800" height="200"></canvas>
+
+    <div id="playlist-container" class="playlist">
+      <!-- Playlist items will go here -->
+    </div>
+  </div>
+
+  <!-- Audio tag (you can preload or dynamically assign src via JS) -->
+  <audio id="audio-player" src="your-audio-file.mp3"></audio>
+
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>
